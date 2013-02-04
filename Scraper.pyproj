@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2d3c5e79-3b46-4126-9000-374761e14516}</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>Scraper.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Scraper</Name>
+    <RootNamespace>Scraper</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="utils.py" />
+    <Compile Include="reviewsave.py" />
+    <Compile Include="reviewtests.py" />
+    <Compile Include="reviews\amazonreview.py" />
+    <Compile Include="reviews\bazaarreview.py" />
+    <Compile Include="reviews\targetreview.py" />
+    <Compile Include="reviews\powerreview.py" />
+    <Compile Include="reviews\review.py" />
+    <Compile Include="Scraper.py" />
+    <Compile Include="websites\amazon.py" />
+    <Compile Include="websites\walgreens.py" />
+    <Compile Include="websites\walmart.py" />
+    <Compile Include="websites\cvs.py" />
+    <Compile Include="websites\qvc.py" />
+    <Compile Include="websites\neutrogena.py" />
+    <Compile Include="websites\ulta.py" />
+    <Compile Include="websites\drugstore.py" />
+    <Compile Include="websites\target.py" />
+    <Compile Include="websites\website.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\" />
+    <Folder Include="reviews\" />
+    <Folder Include="websites\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+</Project>
