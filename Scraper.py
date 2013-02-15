@@ -3,6 +3,7 @@
 
 ## STATIC IMPORTS
 # basic systems functions
+import os
 import sys
 
 # namespace organization
@@ -33,7 +34,7 @@ def sys_append(directory):
 
 def sys_init():
     """ Adds directory, websites, and reviews to sys.path. """
-    basepath = r"C:\Users\toshi\Dropbox\code"
+    basepath = os.getwcwd()
     project = basepath + r"\Scraper\Scraper"
     websites = project + r"\websites"
     reviews = project + r"\reviews"
